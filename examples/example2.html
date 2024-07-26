@@ -30,11 +30,11 @@
     <br>
 
     <!-- CodeMirror 6 -->
-    <script src="../dist/cm6.bundle.min.js"></script>
+    <script src="../cm6/cm6.bundle.min.js"></script>
     <script>
         const oneDarkEl = document.getElementById("oneDark");
         const view = cm6.createEditorView(undefined, document.getElementById("editor"));
-        const initialState = cm6.createEditorState("function foo() {\n    console.log(123);\n}");
+        const initialState = cm6.createEditorState("SELECT * FROM DUCKDB_TABLES();\n}");
         view.setState(initialState);
 
         function changeTheme() {
